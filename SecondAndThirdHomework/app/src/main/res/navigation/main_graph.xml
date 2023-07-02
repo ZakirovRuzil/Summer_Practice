@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.myhomework.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listOfCapitalFragment"
+            app:destination="@id/listOfCapitalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOfCapitalFragment"
+        android:name="com.example.myhomework.ListOfCapitalFragment"
+        android:label="fragment_list_of_capital"
+        tools:layout="@layout/fragment_list_of_capital" >
+        <action
+            android:id="@+id/action_listOfCapitalFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_listOfCapitalFragment_to_seeMoreFragment"
+            app:destination="@id/seeMoreFragment" />
+        <action
+            android:id="@+id/action_listOfCapitalFragment_to_resultCapitalFragment"
+            app:destination="@id/resultCapitalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myhomework.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/seeMoreFragment"
+        android:name="com.example.myhomework.SeeMoreFragment"
+        android:label="fragment_see_more"
+        tools:layout="@layout/fragment_see_more" />
+    <fragment
+        android:id="@+id/resultCapitalFragment"
+        android:name="com.example.myhomework.ResultCapitalFragment"
+        android:label="fragment_result_capital"
+        tools:layout="@layout/fragment_result_capital" />
+</navigation>
